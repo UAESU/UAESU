@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAES - PG School</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo1.png">
+
+    <style>
+          .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+    }
+    h2 {
+      color: #00324e;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    h3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="logo1.png" width="150" height="150" alt="UAES Logo">
+            <div>
+                <h1 class="university-name">UNIVERSITY OF AGRICULTURE AND ENVIRONMENTAL SCIENCES, UMUAGWO</h1>
+                <p class="university-motto">Knowledge, Innovation & Excellence</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <a href="login.html" class="btn">Student Login</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About Us</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="login.html">Student Portal</a></li>
+
+            <!-- Corrected Academics dropdown -->
+            <li class="nav-item accordion active">
+                <b>Academics</b>
+                <span class="arrow">&#9662;</span>
+
+                <ul class="submenu">
+                    <li><a href="faculties.html" class="suba">Faculties</a></li>
+                    <li><a href="admissions.html" class="suba">Admissions</a></li>
+                    <li><a href="pgschool.html" class="suba active">PG School</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="content">
+  <h2>WELCOME TO THE SCHOOL OF POSTGRADUATE STUDIES</h2>
+  <p>University of Agriculture and Environmental Sciences (UAES), Umuagwo, Imo State, Nigeria
+The UAES, with the approval of the National Universities Commission (NUC), has established a School of Postgraduate Studies to run a Master of Science Degree Programme in Agroecology and Food Systems in collaboration with the European Union and Erasmus+ in the 2025/2026 academic session. Candidates may undergo part of the two-year full-time Programme in Partner Universities in France, Austria, Italy, Ghana or Sierra Leone.</p>
+
+  <h3>SPECIAL MASTER OF SCIENCE DEGREE PROGRAMME</h3>
+  <p>TThe University of Agriculture and Environmental Sciences, Umuagwo, Imo State, Nigeria, in collaboration with the European Union and Erasmus+ invites suitably qualified candidates to apply for an intensive National Universities Commission (NUC) approved full time MSc Programme in Agroecology and Food Systems. Candidates have opportunity to conduct part of their studies in any of the Partner Universities in France, Austria, Italy, Ghana or Sierra Leone.</p>
+<p>Or visit us at the School of Postgraduate Studies.</p>
+  <p><strong>Application fee:</strong> ₦20,000</p>
+  <p>For more enquiries call: 08055354759, 08163049161, or 08053273467</p>
+</section>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>UNIVERSITY OF AGRICULTURE AND ENVIROMENTAL SCIENCES, UMUAGWO</h3>
+            <p><i id="loca" class="fa-solid fa-location-dot"></i> 
+                Kilometer 26, Owerri-PortHarcourt Road, Umuagwo Ohaji. PMB 1038 Owerri, Imo State, Nigeria
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Student Portal</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-x-twitter"></i> Twitter (X)</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; copyright 2025. All Right Reserved by UAES 
+           Powered by BlumField Digital (A Division of BlumField Enterprises)
+        </p>
+    </div>
+</footer>
+
+<script>
+const acc = document.querySelector(".accordion");
+const submenu = document.querySelector(".submenu");
+const arrow = document.querySelector(".arrow");
+
+acc.addEventListener("click", function() {
+    submenu.style.display =
+        submenu.style.display === "block" ? "none" : "block";
+
+    // Rotate arrow
+    arrow.style.transform =
+        submenu.style.display === "block" ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
+
+</body>
+</html>

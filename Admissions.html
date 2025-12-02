@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAES - Admissions</title>
+     <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="logo1.png">
+
+    <style>
+/* 
+   GLOBAL BUTTONS
+ */
+ 
+.center-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+.accordion-content table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* helps prevent overflow */
+}
+
+.accordion-content td, 
+.accordion-content th {
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 8px;
+}
+.apply-btn {
+    background: #28a745;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*
+      ICON SECTION
+ */
+.icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 10px;
+}
+
+.icon-box {
+    background:#6589 ;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.icon-box.selected {
+   background: #0b2a53;
+    color: white;
+}
+
+.icon-box img {
+    width: 100px;
+}
+
+/*
+       ACCORDION
+ */
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 17px;
+    background: #0b2a53;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.accordion-btn.active {
+    background: #114d88;
+}
+
+.accordion-btn:after {
+    content: '\02795';
+    font-size: 13px;
+    float: right;
+}
+
+.accordion-btn.active:after {
+    content: "\2796";
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f7f7f7;
+    padding: 0 15px;
+    border-left: 3px solid #0b2a53;
+    transition: max-height 0.3s ease;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 
+      RESPONSIVE WIDTH
+*/
+.accordion-container {
+    width: 100%;
+    margin: 0;
+}
+
+/* Desktop view: left aligned, 50% width */
+@media (min-width: 768px) {
+    .accordion-container {
+        width: 70%;
+        margin-left: 0;
+    }
+}
+.hero {
+    background: url("uaesgate.jpg") center/cover no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: 200px;
+}
+.btnt {
+  text-decoration:none;
+  color:white;
+}
+icon-img {
+  font-size:
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo1.png" width="150" height="150" alt="UAES Logo">
+                <div>
+                    <h1 class="university-name">UNIVERSITY OF AGRICULTURE AND ENVIRONMENTAL SCIENCES, UMUAGWO</h1>
+                    <p class="university-motto">Knowledge, Innovation & Excellence</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn">Student Login</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="index.html">Home</a></li>
+                <li class="nav-item "><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item"><a href="login.html">Student Portal</a></li>
+                        <li class="nav-item accordion active">
+           <b>Academics </b> 
+            <span class="arrow">&#9662;</span>
+        </li>
+        <ul class="submenu">
+           <li><a href= "faculties.html" class = "suba"> Faculties </a></li>
+            <li><a href="admissions.html" class="suba active"> Admissions</a></li>
+            <li> <a href="pgschool.html" class= "suba"> PG School</a></li>
+           
+        </ul>
+            </ul>
+        </div>
+    </nav>
+
+<section class="hero">
+    <h3> <a href="index.html" class= "btnt"><i class="fa fa-house" aria-hidden="true"></i> HOME</a>/ ADMISSIONS</h3>
+</section>
+    <div class="main-container">
+
+        <h2 class="page-title">Admissions</h2>
+
+        <!-- ICON SECTION -->
+        <div class="icon-section">
+            <div class="icon-box selected">
+                <img src="ad1.png" alt="">
+                <p>Admission</p>
+            </div>
+
+            <div class="icon-box">
+                <img src="ad1.png" alt="">
+                <p><a href="login.html" class= "btnt">Student</a></p>
+            </div>
+
+            <div class="icon-box">
+                <img src="1000810659-removebg-preview.png" alt="">
+                <p>Staff</p>
+            </div>
+
+            <div class="icon-box">
+                <img src="1000810659-removebg-preview.png" alt="">
+                <p>Alumni</p>
+            </div>
+        </div>
+
+        <div class="center-btn">
+            <button class="apply-btn">APPLY FOR ADMISSION</button>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <section class="content">
+
+            <h2 class="center-btn">ADMISSION ! ADMISSION !! ADMISSION !!!</h2>
+            <h2 class="center-btn">ADMISSION INTO DEGREE PROGRAMMES FOR 2025/2026 SESSION</h2>
+
+            <p>Applications are invited from suitably qualified candidates for admission into the following full-time programmes:</p>
+
+            <h3>PROGRAMMES:</h3>
+            <h4>FACULTY OF AGRICULTURE</h4>
+    <h5>Courses Available:</h5>
+    <h3>B.Agric in</h3>
+            <!-- ACCORDION -->
+            <div class="accordion-container">
+                <div class="accordion">
+
+                    <button class="accordion-btn">Agricultural Extension</button>
+                    <div class="accordion-content">
+                        <h4>Requirements:</h4>
+                       <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direc Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+  </tr>
+</table>
+                    </div>
+
+                    <button class="accordion-btn">Agricultural Economics</button>
+                    <div class="accordion-content">
+                        <h4>Requirements:</h4>
+   <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direc Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+  </tr>
+</table>
+                    </div>
+                     <button class="accordion-btn">Animal Production</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direc Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+  </tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Crop Production</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direc Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+  </tr>
+</table>
+        </div>
+
+    <button class="accordion-btn">Soil Science</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direc Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.</td>
+  </tr>
+</table>
+        </div>
+        
+        <h3> B.Aqua./Fisheries</h3>
+        
+        <button class="accordion-btn">Fisheries & Aquaculture</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direct Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are English Language, Chemistry, Biology/ Agricultural Science and Mathematics/ Physics.</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology, Economics and Health Science.</td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.	ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology,</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.	ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology,</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English, Mathematics, Chemistry and Biology/ Agricultural Science. At least a pass in Physics. At least a pass in Biology must back up the Credit pass in Agric Science.	ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes in Chemistry and one of Botany/Zoology/ Biology/ Physics/Agric. Science, Geography, Maths., Geology,</td>
+  </tr>
+</table>
+        </div>
+        
+        <h3>B.Sc. in</h3>
+        <button class="accordion-btn">Food Science and Technology
+</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <th>UTME</th>
+    <th>Direct Entry</th>
+    <th>Transfer</th>
+  </tr>
+
+  <tr>
+    <td>UTME subjects are: English language, Chemistry, Biology,Physics or Mathematics. 1</td>
+    <td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in Chemistry, Physics or Mathematics. </td>
+    <td>All results from your previous institution</td>
+  </tr>
+
+  <tr>
+    <td>Five Credit passes at SSCE (or its equivalent) including English Language, Mathematics, Physics, Chemistry, and any other Science subject.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English Language, Mathematics, Physics, Chemistry, and any other Science subject.</td>
+    <td>Five Credit passes at SSCE (or its equivalent) including English Language, Mathematics, Physics, Chemistry, and any other Science subject.</td>
+  </tr>
+</table>
+        </div>
+        
+        <h4>FACULTY  OF SCIENCE AND COMPUTING (FSC)</h4>
+    <h5>Courses Available:</h5>
+    
+<button class="accordion-btn">Biology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td> UTME subjects are: English Language, Biology, Chemistry and any relevant science subject.</td>
+<td>ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics)</td>
+<td>All results from your previous institution.</td>
+</tr>
+<tr>
+<td>Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td> 
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+
+        <button class="accordion-btn"> Microbiology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+                   <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td> UTME subjects are: English Language, Biology, Chemistry and any relevant science subject.</td>
+<td>ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics)</td>
+<td>All results from your previous institution.</td>
+</tr>
+<tr>
+<td>Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td> 
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Biotechnology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+                   <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td> UTME subjects are: English Language, Biology, Chemistry and any relevant science subject.</td>
+<td>ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics)</td>
+<td>All results from your previous institution.</td>
+</tr>
+<tr>
+<td>Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td> 
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+
+    <button class="accordion-btn">Biochemistry</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+                   <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td> UTME subjects are: English Language, Biology, Chemistry and any relevant science subject.</td>
+<td>ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics)</td>
+<td>All results from your previous institution.</td>
+</tr>
+<tr>
+<td>Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td> 
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry, Biology and any other     relevant science subjects     Technical Drawing, Agricultural Science and Geography and at least a pass in Physics in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Mathematics</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+UTME subjects are: English Language, Mathematics, Physics and Chemistry
+</td>
+<td>
+ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics) 
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+
+        <button class="accordion-btn">Computer Science</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+UTME subjects are: English Language, Mathematics, Physics and Chemistry
+</td>
+<td>
+ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics) 
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Information Technology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+UTME subjects are: English Language, Mathematics, Physics and Chemistry
+</td>
+<td>
+ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics) 
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+          <button class="accordion-btn">Physics</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+UTME subjects are: English Language, Mathematics, Physics and Chemistry
+</td>
+<td>
+ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics) 
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Chemistry</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+           <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+UTME subjects are: English Language, Mathematics, Physics and Chemistry
+</td>
+<td>
+ND/ HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes (or JUPEB passes) in two relevant subjects (Biology, Botany, Chemistry, Geography, Mathematics and Physics) 
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry Physics and any other relevant science subjects in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+         <h4>FACULTY OF ENVIRONMENTAL SCIENCES (FES)</h4>
+    <h5>Courses Available:</h5>
+    
+         <button class="accordion-btn">Estate Management  and Valuation</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>UTME subjects are English language, and any three of the following; Economics, Physics, Mathematics, Chemistry, Geography, Biology, Agricultural Science.</td>
+<td>
+  ND/HND with minimum of Lower Credit level pass  in Estate Management or allied professions or professional certificate may be assessed and placed appropriately or ‘A’ level passes or JUPEB passes (or equivalent) in two relevant subjects.
+</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Economics and any other two subjects from Chemistry, Physics, Business Studies/ Commerce, Geography, Biology, Agricultural Science and Technical Drawing in not more than two sittings. 
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Economics and any other two subjects from Chemistry, Physics, Business Studies/ Commerce, Geography, Biology, Agricultural Science and Technical Drawing in not more than two sittings. 
+</td>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Economics and any other two subjects from Chemistry, Physics, Business Studies/ Commerce, Geography, Biology, Agricultural Science and Technical Drawing in not more than two sittings. 
+</td>
+</tr>
+</table>
+        </div>
+        
+        <button class="accordion-btn">Environmental Management & Toxicology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+  UTME subjects are: English language, Chemistry, Physics/Mathematics, Biology or any relevant Science subject.
+</td>
+<td>ND/HND with minimum of Lower Credit level pass in relevant field or Two ‘A’ level passes or JUPEB passes (or equivalent) in Biology and Chemistry, </td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+  Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry and Biology/Agric. Science and any other Science subjects in not more than two sittings. Candidates must also have at-least a pass in physics.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry and Biology/Agric. Science and any other Science subjects in not more than two sittings. Candidates must also have at-least a pass in physics.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Chemistry and Biology/Agric. Science and any other Science subjects in not more than two sittings. Candidates must also have at-least a pass in physics.
+</td>
+</tr>
+</table>
+        </div>
+
+    <button class="accordion-btn">Horticulture & Landscape Architecture</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+           <table border="1" width="100%" style="border-collapse: collapse;">
+<tr>
+<th> UTME</th>
+<th> Direct Entry</th>
+<th> Transfer </th>
+</tr>
+<tr>
+<td>
+  UTME subjects are: English language, Biology and any two of the following: Economics, Physics, Mathematics, Geography, Chemistry.
+</td>
+<td>ND/ HND with minimum of Lower Credit level pass in Architecture, Urban Planning, Building, Estate Management, Land Survey or Fine Arts  or ‘A’ level passes or JUPEB passes (or equivalent) in Biology and Physics, or Mathematics or Geography.</td>
+<td>
+  All results from your previous institution
+</td>
+</tr>
+<tr>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Biology and two other subjects from the following list: Chemistry, Physics, Technical Drawing, Fine Arts, Geography, Economics, Building Construction, Land Surveying and Agriculture in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Biology and two other subjects from the following list: Chemistry, Physics, Technical Drawing, Fine Arts, Geography, Economics, Building Construction, Land Surveying and Agriculture in not more than two sittings.
+</td>
+<td>
+Five Credit level passes at SSCE (or its equivalent) including English Language, Mathematics, Biology and two other subjects from the following list: Chemistry, Physics, Technical Drawing, Fine Arts, Geography, Economics, Building Construction, Land Surveying and Agriculture in not more than two sittings.
+</td>
+</tr>
+</table>
+        </div>
+        
+           <h4>FACULTY OF ARTS, SOCIAL AND MANAGEMENT SCIENCES (FASM)</h4>
+    <h5>Courses Available:</h5>
+    
+         <button class="accordion-btn">Accounting</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Taxation</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+
+    <button class="accordion-btn">Peace Studies and Conflict Resolution</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+          <button class="accordion-btn">Criminology and Security Studies</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Psychology</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+          <button class="accordion-btn">Business Administration</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Marketing</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Entrepreneurship</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Cooperative and Rural Development</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <h4>FACULTY OF ENGINEERING</h4>
+    <h5>Courses Available:</h5>
+    
+         <button class="accordion-btn">Civil Engineering</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Water & Irrigation Engineering</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+
+    <button class="accordion-btn">Mechanical Engineering</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+          <button class="accordion-btn">Electrical & Electronics Engineering Studies</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+        
+        <button class="accordion-btn">Chemical and Petroleum Engineering</button>
+        <div class="accordion-content">
+            <h4>Requirements:</h4>
+            <p>Insert requirements.</p>
+        </div>
+                    <!-- Continue with your other accordion items... -->
+
+                </div>
+            </div>
+
+            <h3>GENERAL ENTRY REQUIREMENTS</h3>
+            <p>Admission is open to candidates who scored a minimum of 150 in the 2025/2026 UTME.</p>
+
+            <p>Candidates who did not choose UAES initially can apply after changing institution on JAMB.</p>
+
+            <p>Candidates must have 5 O’Level credits in relevant subjects in not more than 2 sittings.Candidates waiting O’ level results can also apply but they will not be considered for admission until their results are available.</p>
+
+            <h3>HOW TO APPLY</h3>
+
+            <ol class="roman-list">
+        <li>Login to <strong>Remita</strong> and click on search for biller (University of Agriculture and Environmental Science).</li>
+
+        <li>Click on <strong>POST UTME</strong> (Name of service/purpose) and proceed with your personal details to pay for the application form.</li>
+
+        <li>After successful payment, login to University website or click <a href="#">here</a> to fill the application form.</li>
+
+        <li>Fill the form completely and correctly and click on submit button.</li>
+
+        <li>You will be contacted by the Admission for further directive.</li>
+
+        <li>For inquiries and further information</li>
+    </ol>
+
+            <h4>Contact:</h4>
+            <p>Email: registrar@uaes.edu.ng, admission@uaes.edu.ng</p>
+            <p>Phone: 0706 734 0518, 0806 909 6226, 0803 836 7600</p>
+
+        </section>
+
+        <div class="center-btn">
+            <button class="apply-btn">APPLY FOR ADMISSION</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>University of Agriculture and Environmental Sciences , Umuagwo</h3>
+                <p><i id="loca" class =" fa-solid fa-location-dot" > </i> Kilometer 26, Owerri-PortHarcourt Road,Umuagwo Ohaji. PMB 1038 Owerri, Imo State, Nigeria</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="footer-links">
+      <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <li><a href="#"><i class="fab fa-x-twitter"></i> Twitter (X)</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+    </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; copyright 2025. All Right Reserved by UAES Powered by BlumField Digital A Division of BlumField Enterprises</p>
+        </div>
+    </footer>
+
+    <script>
+/* ===========================
+   FIXED ACCORDION SCRIPT
+=========================== */
+document.querySelectorAll(".accordion-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        document.querySelectorAll(".accordion-btn").forEach(other => {
+            if (other !== btn) {
+                other.classList.remove("active");
+                other.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        btn.classList.toggle("active");
+        let content = btn.nextElementSibling;
+
+        if (btn.classList.contains("active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
+    });
+});
+const acc = document.querySelector(".accordion");
+const submenu = document.querySelector(".submenu");
+const arrow = document.querySelector(".arrow");
+
+acc.addEventListener("click", function() {
+    submenu.style.display =
+        submenu.style.display === "block" ? "none" : "block";
+
+    // Rotate arrow
+    arrow.style.transform =
+        submenu.style.display === "block" ? "rotate(180deg)" : "rotate(0deg)";
+});
+    </script>
+
+</body>
+</html>

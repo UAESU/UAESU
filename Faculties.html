@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo1.png">
+
+    <style>
+     
+
+        .faculty-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .faculty-section h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .faculty-section p {
+            max-width: 600px;
+            margin: 10px auto 40px auto;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .faculty-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .faculty-card {
+            width: 280px;
+            height: 160px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform .3s;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faculty-card span {
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+        }
+        .faculty-container a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="logo1.png" width="150" height="150" alt="UAES Logo">
+            <div>
+                <h1 class="university-name">UNIVERSITY OF AGRICULTURE AND ENVIRONMENTAL SCIENCES, UMUAGWO</h1>
+                <p class="university-motto">Knowledge, Innovation & Excellence</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <a href="login.html" class="btn">Student Login</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About Us</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="login.html">Student Portal</a></li>
+
+            <!-- Corrected Academics dropdown -->
+            <li class="nav-item accordion active">
+                <b>Academics</b>
+                <span class="arrow">&#9662;</span>
+
+                <ul class="submenu">
+                    <li><a href="faculties.html" class="suba active">Faculties</a></li>
+                    <li><a href="admissions.html" class="suba">Admissions</a></li>
+                    <li><a href="pgschool.html" class="suba">PG School</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="faculty-section">
+    <h2>Our Faculties and their Departments</h2>
+    <p>Checkout the list of our faculties, departments and programmes all carefully selected,
+       accredited and approved by the Nigeria Universities Commission.</p>
+
+    <div class="faculty-container">
+
+    <a href="https://www.uaes.edu.ng/faculties/viewfaculty/5/faculty-of-engineering">
+        <div class="faculty-card" style="background-image: url('eng.jpeg');">
+            <span>Engineering</span>
+        </div>
+    </a>
+
+    <a href="https://www.uaes.edu.ng/faculties/viewfaculty/2/faculty-of-science-and-computing">
+        <div class="faculty-card" style="background-image: url('science.jpg');">
+            <span>Science and Computing</span>
+        </div>
+    </a>
+
+    <a href="https://www.uaes.edu.ng/faculties/viewfaculty/1/faculty-of-agriculture">
+        <div class="faculty-card" style="background-image: url('agric.jpeg');">
+            <span>Agriculture</span>
+        </div>
+    </a>
+
+    <a href="https://www.uaes.edu.ng/faculties/viewfaculty/3/faculty-of-environmental-science">
+        <div class="faculty-card" style="background-image: url('env.jpeg');">
+            <span>Environmental Sciences</span>
+        </div>
+    </a>
+
+    <a href="https://www.uaes.edu.ng/faculties/viewfaculty/4/faculty-of-arts-management-and-social-sciences">
+        <div class="faculty-card" style="background-image: url('art.jpeg');">
+            <span>Arts, Social And Management Sciences</span>
+        </div>
+    </a>
+
+</div>
+</section>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>UNIVERSITY OF AGRICULTURE AND ENVIROMENTAL SCIENCES, UMUAGWO</h3>
+            <p><i id="loca" class="fa-solid fa-location-dot"></i> 
+                Kilometer 26, Owerri-PortHarcourt Road, Umuagwo Ohaji. PMB 1038 Owerri, Imo State, Nigeria
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Student Portal</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-x-twitter"></i> Twitter (X)</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; copyright 2025. All Right Reserved by UAES 
+           Powered by BlumField Digital (A Division of BlumField Enterprises)
+        </p>
+    </div>
+</footer>
+
+<script>
+const acc = document.querySelector(".accordion");
+const submenu = document.querySelector(".submenu");
+const arrow = document.querySelector(".arrow");
+
+acc.addEventListener("click", function() {
+    submenu.style.display =
+        submenu.style.display === "block" ? "none" : "block";
+
+    // Rotate arrow
+    arrow.style.transform =
+        submenu.style.display === "block" ? "rotate(180deg)" : "rotate(0deg)";
+});
+</script>
+
+</body>
+</html>
